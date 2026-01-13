@@ -1,0 +1,515 @@
+/* ========================= */
+/* PRODUCT LIST PAGE */
+/* ========================= */
+
+.product-list {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 20px;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #111827;
+}
+
+.product-list h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* ========================= */
+/* SEARCH */
+/* ========================= */
+
+.product-search {
+  width: 280px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  margin-bottom: 22px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.product-search:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* ========================= */
+/* PRODUCT CARD */
+/* ========================= */
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.product-row.disabled {
+  opacity: 0.55;
+}
+
+/* ========================= */
+/* IMAGE */
+/* ========================= */
+
+.product-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  flex-shrink: 0;
+}
+
+/* ========================= */
+/* INFO */
+/* ========================= */
+
+.product-info {
+  flex: 1;
+  min-width: 140px;
+}
+
+.product-info b {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* ========================= */
+/* BADGES */
+/* ========================= */
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.badge.available {
+  background: #ecfdf5;
+  color: #166534;
+}
+
+.badge.unavailable {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.badge.popular {
+  background: linear-gradient(135deg, #fde68a, #f59e0b);
+  color: #78350f;
+}
+
+/* ========================= */
+/* ACTION BUTTONS */
+/* ========================= */
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Buttons match Category UI */
+
+.btn {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #f3f4f6;
+  color: #111827;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background: #e5e7eb;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+}
+
+.btn.warning {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #78350f;
+}
+
+.btn.danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+}
+
+/* ========================= */
+/* EDIT PANEL */
+/* ========================= */
+
+.edit-panel {
+  width: 100%;
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edit-panel input,
+.edit-panel textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.edit-panel input:focus,
+.edit-panel textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.edit-panel textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.edit-panel label {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* ========================= */
+/* EDIT ACTIONS */
+/* ========================= */
+
+.edit-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 640px) {
+  .product-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .product-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .product-search {
+    width: 100%;
+  }
+}
+
+/* ========================= */
+/* CLICKABLE HEADER */
+/* ========================= */
+
+.product-main.clickable {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* prevent buttons inside from triggering toggle */
+.product-actions button,
+.product-actions input {
+  pointer-events: auto;
+}
+
+/* ========================= */
+/* TOGGLE GROUPS */
+/* ========================= */
+
+.toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* ========================= */
+/* SWITCH (if not already present) */
+/* ========================= */
+
+.switch {
+  position: relative;
+  width: 42px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #e5e7eb;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+  background: #6366f1;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* ========================= */
+/* BUTTON DISABLED STATE */
+/* ========================= */
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========================= */
+/* MODAL (REPLACES ALERT / CONFIRM) */
+/* ========================= */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: modalPop 0.18s ease;
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.modal p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ========================= */
+/* IMAGE PREVIEW */
+/* ========================= */
+
+.image-preview img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-top: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ========================= */
+/* BADGE GROUP FIX */
+/* ========================= */
+
+.badge-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product-main {
+  flex-wrap: wrap;
+}
+
+/* ========================= */
+/* UPLOAD IMAGE (EDIT PANEL) */
+/* ========================= */
+
+.edit-panel .file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 2px dashed #d1d5db;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.edit-panel .file-label:hover {
+  background: #f9fafb;
+  border-color: #6366f1;
+}
+
+.edit-panel .file-input {
+  display: none;
+}
+
+.edit-panel .image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-panel .image-preview img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ========================= */
+/* PAGINATION */
+/* ========================= */
+
+/* ========================= */
+/* PAGINATION FIX (HORIZONTAL) */
+/* ========================= */
+
+.pagination {
+  display: flex;
+  flex-direction: row; /* force horizontal */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+/* Override global button styles */
+.pagination .btn {
+  width: auto !important;
+  min-width: 38px;
+  height: 38px;
+
+  display: inline-flex; /* 🔥 key fix */
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Active page */
+.pagination .btn.primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.35);
+}
+
+/* Disabled */
+.pagination .btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
