@@ -1,0 +1,318 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.manage-users {
+  padding: 12px;
+}
+
+.manage-users h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+.table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   TABLE
+========================= */
+.manage-users table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.manage-users thead {
+  background: #f9fafb;
+}
+
+.manage-users th,
+.manage-users td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.manage-users th {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================
+   ROW STATES
+========================= */
+.manage-users tbody tr:hover {
+  background: #f9fafb;
+}
+
+.manage-users tbody tr.disabled {
+  opacity: 0.5;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.badge {
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.disabled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* =========================
+   ONLINE STATUS
+========================= */
+.online {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.offline {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* =========================
+   ACTIONS (INLINE)
+========================= */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+passwor.password-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-toggle {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.btn-toggle:hover {
+  background: #4338ca;
+}
+
+.btn-disable {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-disable:hover {
+  background: #b91c1c;
+}
+
+.btn-password {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-password:hover {
+  background: #d1d5db;
+}
+
+/* =========================
+   PASSWORD INPUT (INLINE)
+========================= */
+.password-input {
+  width: 120px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 768px) {
+  .manage-users table {
+    font-size: 13px;
+  }
+
+  .manage-users th,
+  .manage-users td {
+    padding: 8px 10px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 640px) {
+  .manage-users {
+    padding: 10px;
+  }
+
+  .manage-users h3 {
+    font-size: 18px;
+  }
+
+  .actions {
+    gap: 6px;
+  }
+
+  .password-row {
+    gap: 4px;
+  }
+
+  .password-input {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .btn-password {
+    white-space: nowrap;
+  }
+}
+/* =========================
+   MODAL
+========================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  animation: scaleIn 0.2s ease;
+}
+
+.modal.success {
+  border-top: 5px solid #16a34a;
+}
+
+.modal.error {
+  border-top: 5px solid #dc2626;
+}
+
+.modal p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.modal-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background: #4338ca;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btn-delete {
+  background: #7f1d1d;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #991b1b;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.modal-btn.danger {
+  background: #dc2626;
+}
+
+.modal-btn.danger:hover {
+  background: #b91c1c;
+}
+
+.btn-call {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+.btn-call:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
